@@ -1,9 +1,11 @@
 @use './colors' as colors;
 @use './animation' as animation;
 
-@use './small' as small;
-@use './medium' as medium;
-@use './large' as large;
+// @use './small' as small;
+// @use './medium' as medium;
+// @use './large' as large;
+
+@use './mixins' as mixins;
 
 *,
 *::before,
@@ -173,5 +175,6 @@ h1.company-namy {
 	}
 }
 
+// -----mixins-----
 
-// @import './large';
+@include mixins.large;

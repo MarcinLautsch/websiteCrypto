@@ -1,12 +1,3 @@
-@media (min-width: 992px) {
-  .header {
-    grid-template-rows: auto repeat(2, 1fr);
-  }
-  .header__text {
-    grid-row: 2/4;
-    grid-column: 1/2;
-  }
-}
 *,
 *::before,
 *::after {
@@ -154,4 +145,21 @@ h1.company-namy {
 }
 .nav__link::before:hover::before {
   animation: pulse 1s;
+}
+
+@media (min-width: 992px) {
+  .header {
+    grid-template-rows: auto repeat(2, 1fr);
+  }
+  .header__text {
+    grid-row: 2/4;
+    grid-column: 1/2;
+  }
+  .header__text p {
+    font-size: 1.8rem;
+  }
+  .header__img {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
 }/*# sourceMappingURL=main.css.map */
