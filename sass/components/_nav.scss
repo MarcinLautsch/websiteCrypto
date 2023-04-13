@@ -1,0 +1,58 @@
+@use '../colors';
+
+.nav {
+	&-mobile {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background-color: colors.$white;
+		z-index: 10;
+		transform: translateX(-102%);
+		transition: transform 0.3s;
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+
+	&-desktop {
+		display: none;
+	}
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		margin: 0.05em;
+		padding: 0.5em;
+		font-size: 2.3rem;
+		color: colors.$darker;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: color 0.3s;
+
+		&:hover {
+			color: colors.$gold;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border: 1px solid colors.$gold;
+			opacity: 0;
+
+			&:hover::before {
+				animation: pulse 1s;
+			}
+		}
+	}
+}

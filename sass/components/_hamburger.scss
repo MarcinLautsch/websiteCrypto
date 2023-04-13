@@ -1,0 +1,16 @@
+@use '../colors' as colors;
+
+.hamburger {
+	position: absolute;
+	top: 3em;
+	left: 1em;
+	transform: translateY(-50%);
+	z-index: 100;
+
+	&-inner,
+	&-inner::before,
+	&-inner::after {
+		background-color: colors.$white;
+		z-index: 100;
+	}
+}
