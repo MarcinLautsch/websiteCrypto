@@ -183,65 +183,6 @@
   z-index: 100;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-.header__text {
-  display: grid;
-  align-items: center;
-  grid-row: 2/3;
-  grid-column: 1/3;
-  padding: 2em;
-}
-.header__text .company-name {
-  font-size: 4rem;
-  font-family: "Cinzel", serif;
-  color: #d6c78e;
-  align-self: end;
-}
-.header__text p {
-  font-weight: 200;
-}
-.header__img {
-  grid-row: 1/2;
-  grid-column: 1/3;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/btcSmall.jpg");
-  background-size: cover;
-  background-position: center;
-  filter: sepia();
-}
-.header__shadow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.header__arrow {
-  display: none;
-}
-.header__bg-icon-one, .header__bg-icon-two {
-  position: absolute;
-  opacity: 0.05;
-  z-index: -5;
-}
-.header__bg-icon-one {
-  bottom: 2em;
-  right: -3em;
-  width: 50%;
-  animation: rotate-right 55s infinite linear;
-}
-.header__bg-icon-two {
-  display: none;
-}
-
 @media (min-width: 992px) {
   .header {
     grid-template-rows: auto repeat(2, 1fr);
@@ -331,6 +272,65 @@
     font-size: 2.2rem;
   }
 }
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.header__text {
+  display: grid;
+  align-items: center;
+  grid-row: 2/3;
+  grid-column: 1/3;
+  padding: 2em;
+}
+.header__text .company-name {
+  font-size: 4rem;
+  font-family: "Cinzel", serif;
+  color: #d6c78e;
+  align-self: end;
+}
+.header__text p {
+  font-weight: 200;
+}
+.header__img {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/btcSmall.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: sepia();
+}
+.header__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.header__arrow {
+  display: none;
+}
+.header__bg-icon-one, .header__bg-icon-two {
+  position: absolute;
+  opacity: 0.05;
+  z-index: -5;
+}
+.header__bg-icon-one {
+  bottom: 2em;
+  right: -3em;
+  width: 50%;
+  animation: rotate-right 55s infinite linear;
+}
+.header__bg-icon-two {
+  display: none;
+}
+
 .cards {
   background-color: #191919;
   overflow: hidden;
@@ -394,109 +394,17 @@
 }
 
 @media (min-width: 768px) {
-  .cards__card__box {
-    padding: 10em 2em;
-  }
   .cards__card--one {
     grid-column: 1/4;
-    grid-row: 1/2;
+    grid-row: 1/3;
   }
   .cards__card--two {
     grid-column: 4/7;
-    grid-row: 1/2;
+    grid-row: 1/3;
   }
   .cards__card--three {
     grid-column: 7/10;
-    grid-row: 1/2;
-  }
-}
-@media (min-width: 992px) {
-  .header {
-    grid-template-rows: auto repeat(2, 1fr);
-  }
-  .header .company-name {
-    font-size: 6rem;
-  }
-  .header__text {
-    grid-row: 2/4;
-    grid-column: 1/2;
-  }
-  .header__text p {
-    align-self: start;
-    font-size: 2rem;
-  }
-  .header__img {
-    grid-row: 1/4;
-    grid-column: 2/3;
-  }
-  .header__arrow {
-    display: block;
-    position: absolute;
-    bottom: 3em;
-    left: 48%;
-    padding: 2em;
-    transform: translateX(-50%);
-    border: 1px solid #fff;
-    border-radius: 50%;
-  }
-  .header__arrow::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-  }
-  .header__arrow-icon {
-    width: 50px;
-  }
-  .header__bg-icon-one {
-    left: 6em;
-    bottom: 7em;
-    width: 10%;
-  }
-  .header__bg-icon-two {
-    display: block;
-    top: 10em;
-    left: 35%;
-    width: 5%;
-    animation: rotate-left 55s infinite linear;
-  }
-  .nav {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    padding: 1em;
-  }
-  .nav-desktop {
-    display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  .nav__link {
-    color: #fff;
-  }
-  .nav__link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #d6c78e;
-    opacity: 0;
-  }
-  .nav__link:hover::before {
-    animation: pulse 1s;
-  }
-  .hamburger {
-    display: none;
-  }
-}
-@media (min-width: 1200px) {
-  .header__text p {
-    font-size: 2.2rem;
+    grid-row: 1/3;
   }
 }
 *,

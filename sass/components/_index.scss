@@ -1,5 +1,5 @@
-@use 'nav';
-@use 'hamburger';
-@use 'header';
-@use 'main';
-@use 'mediaAll';
+@forward 'nav';
+@forward 'hamburger';
+@forward 'header';
+@forward 'main';
+@forward 'mediaAll';
