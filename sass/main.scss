@@ -26,19 +26,10 @@ body {
 	background-color: colors.$dark;
 }
 
-h1.company-namy {
-	margin-bottom: 0.5em;
-	font-size: 3rem;
-	font-family: 'Cinzel', serif;
-	color: colors.$gold;
-}
-
 .wrapper {
-	margin: 0auto;
+	margin: 0 auto;
 	max-width: 1200px;
 	width: 100%;
 }
-
-// -----mixins-----
 
 // @include mixins.large;

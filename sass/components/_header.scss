@@ -10,11 +10,17 @@
 
 	&__text {
 		display: grid;
-		justify-content: center;
 		align-items: center;
 		grid-row: 2/3;
 		grid-column: 1/3;
 		padding: 2em;
+
+		.company-name {
+			font-size: 4rem;
+			font-family: 'Cinzel', serif;
+			color: colors.$gold;
+			align-self: end;
+		}
 
 		p {
 			font-weight: 200;
@@ -62,17 +68,24 @@
 	}
 }
 
+// ---------Media------------------
+
 @media (min-width: 992px) {
 	.header {
 		grid-template-rows: auto repeat(2, 1fr);
 
+		.company-name {
+			font-size: 6rem;
+		}
+
 		&__text {
 			grid-row: 2/4;
 			grid-column: 1/2;
-			text-align: center;
+			// text-align: center;
 
 			p {
-				font-size: 1.8rem;
+				align-self: start;
+				font-size: 2rem;
 			}
 		}
 
@@ -117,7 +130,7 @@
 		&__bg-icon-two {
 			display: block;
 			top: 10em;
-			left: 31em;
+			left: 35%;
 			width: 5%;
 			animation: rotate-left 55s infinite linear;
 		}
@@ -135,10 +148,37 @@
 
 		&__link {
 			color: colors.$white;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 1px solid colors.$gold;
+				opacity: 0;
+			}
+
+			&:hover::before {
+				animation: pulse 1s;
+			}
 		}
 	}
 
 	.hamburger {
 		display: none;
+	}
+}
+
+// -------Media 1200px-----
+
+@media (min-width: 1200px) {
+	.header {
+		&__text {
+			p {
+				font-size: 2.2rem;
+			}
+		}
 	}
 }
