@@ -77,3 +77,78 @@
 		display: none;
 	}
 }
+
+// ------Media-------------
+
+@media (min-width: 992px) {
+	.section-title {
+		font-size: 4.8rem;
+
+		::before {
+			height: 4px;
+		}
+	}
+}
+
+// -----------------------------------
+
+@media (min-width: 576px) {
+	.info {
+		grid-template-areas:
+			'title box'
+			'title box'
+			'title box';
+		padding: 10em 2em;
+
+		&__box {
+			display: grid;
+			justify-content: end;
+		}
+
+		&__title {
+			padding: 0 1em;
+		}
+
+		.photo {
+			max-width: 500px;
+		}
+
+		&__box-text {
+			max-width: 500px;
+		}
+
+		&__bg-icon {
+			position: absolute;
+			display: block;
+			opacity: 0.05;
+			z-index: -5;
+			&--one {
+				top: 14%;
+				left: 4%;
+				width: 15%;
+				animation: rotate-right 160s infinite linear;
+			}
+
+			&--two {
+				bottom: 10%;
+				left: 10%;
+				width: 30%;
+				animation: rotate-left 140s infinite linear;
+			}
+
+			&--three {
+				top: 26%;
+				left: 16%;
+				width: 50%;
+				animation: rotate-left 150s infinite linear;
+			}
+
+			&--four {
+				top: 55%;
+				left: -8%;
+				width: 15%;
+				animation: rotate-right 130s infinite linear;
+			}
+		}
+	}
+}
