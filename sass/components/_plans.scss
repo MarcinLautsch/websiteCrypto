@@ -1,0 +1,58 @@
+@use '../colors';
+
+.plans {
+	padding: 6em 2em;
+	background-color: colors.$darker;
+
+	&__box {
+		margin: 1em 0;
+		padding: 2em 1em;
+		text-align: center;
+		border: 1px solid transparent;
+		border-radius: 8px;
+		background-color: colors.$dark;
+		cursor: pointer;
+
+		&:hover {
+			background-color: colors.$darker;
+			border: 1px solid colors.$gold;
+			transition: 0.5s;
+		}
+	}
+
+	&__item {
+		margin: 1em 0;
+	}
+
+	&__item-icon {
+		width: 50px;
+	}
+
+	&__item-name {
+		margin-top: 0;
+		margin-bottom: 1.5em;
+		font-size: 1.8rem;
+		color: colors.$gold;
+	}
+}
+
+// ------------Media-----------------
+@media (min-width: 768px) {
+	.plans {
+		padding: 8em 2em;
+
+		&__box {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			align-items: center;
+		}
+
+		&__item {
+			margin: 0 1em;
+		}
+		&__item-name {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
