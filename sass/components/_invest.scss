@@ -1,0 +1,79 @@
+@use '../colors';
+
+.section-title {
+	position: relative;
+	margin: 0 auto 2em;
+	font-size: 3.2rem;
+	color: colors.$gold;
+	font-weight: 200;
+	width: fit-content;
+
+	::before {
+		content: '';
+		position: absolute;
+		bottom: -0.1em;
+		left: 0;
+		width: 40px;
+		height: 2px;
+		background-color: colors.$gold;
+	}
+
+	span {
+		font-weight: 900;
+	}
+}
+
+.info {
+	position: relative;
+	display: grid;
+	grid-template-areas:
+		'title title title'
+		'box box box'
+		'box box box';
+	padding: 6em 2em;
+
+	.photo {
+		width: 100%;
+		object-fit: cover;
+		filter: sepia();
+	}
+
+	&__title {
+		grid-area: title;
+	}
+
+	&__boxes {
+		grid-area: box;
+	}
+
+	&__box-title {
+		margin: 0.3em 0;
+		font-size: 2.6rem;
+		color: colors.$gold;
+		font-weight: 200;
+	}
+
+	&__box-text {
+		margin-bottom: 0.5em;
+	}
+
+	&__box-link {
+		display: block;
+		margin-bottom: 2em;
+		font-weight: bold;
+		word-spacing: 4px;
+		letter-spacing: 1px;
+		color: colors.$gold;
+		text-decoration: none;
+		text-align: right;
+		transition: color 0.3s;
+
+		&:hover {
+			color: colors.$darkgold;
+		}
+	}
+
+	&__bg-icon {
+		display: none;
+	}
+}
