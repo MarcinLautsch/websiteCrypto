@@ -1,0 +1,69 @@
+@use '../colors';
+
+.newsletter {
+	padding: 8em 2em;
+	background-color: colors.$red;
+	text-align: center;
+
+	&__text {
+		padding: 1em;
+		margin-bottom: 1em;
+		font-size: 4rem;
+		font-weight: 200;
+	}
+
+	&__form {
+		.inputNews {
+			margin-bottom: 1em;
+			padding: 1em;
+			width: 100%;
+			background-color: colors.$white;
+			border: 1px solid transparent;
+		}
+
+		.btnNews {
+			padding: 1em;
+			border: 1px solid colors.$gold;
+			color: colors.$white;
+			background: none;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+
+			&:hover {
+				color: colors.$red;
+				background-color: colors.$gold;
+			}
+		}
+	}
+}
+
+// ----------Media-------------------------
+
+@media (min-width: 768px) {
+	.newsletter {
+		&__wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			align-items: center;
+		}
+
+		&__text {
+			margin-bottom: 0;
+		}
+
+		&__form {
+			display: grid;
+			grid-template-columns: 3fr, 1fr;
+			gap: 0.5em;
+		}
+
+		.inputNews {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// --------Kamil---------
+// -media w jednym pliku
+// /do omowienia ze chem zeby byly w jednej lini sign i form i btn???
