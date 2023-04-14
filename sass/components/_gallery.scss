@@ -1,0 +1,38 @@
+@use '../colors';
+
+.gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	.galleryPhoto {
+		height: 300px;
+		width: 100%;
+		object-fit: cover;
+
+		&:nth-child(odd) {
+			display: none;
+		}
+	}
+}
+
+// -----Media------------
+
+@media (min-width: 768px) {
+	.gallery {
+		grid-template-columns: repeat(4, 1fr);
+
+		.galleryPhoto {
+			&:nth-child(odd) {
+				display: block;
+			}
+		}
+	}
+}
+
+// -----------------------
+
+@media (min-width: 1200px) {
+	.gallery {
+		grid-template-columns: repeat(8, 1fr);
+	}
+}

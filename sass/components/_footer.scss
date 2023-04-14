@@ -1,0 +1,7 @@
+@use '../colors';
+
+.footer {
+	padding: 3em 1em;
+	border-top: 6px solid colors.$darker;
+	text-align: center;
+}
