@@ -54,8 +54,9 @@
 
 		&__form {
 			display: grid;
-			grid-template-columns: 3fr, 1fr;
-			gap: 0.5em;
+			// fajnie tez sie uklada bez grid-template-columns
+			grid-template-columns: 3fr 1fr;
+			gap: 1em;
 		}
 
 		.inputNews {
@@ -63,7 +64,3 @@
 		}
 	}
 }
-
-// --------Kamil---------
-// -media w jednym pliku
-// /do omowienia ze chem zeby byly w jednej lini sign i form i btn???
