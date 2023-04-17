@@ -3,8 +3,6 @@
 @use 'animation' as animation;
 @use 'components';
 
-// @use './mixins' as mixins;
-
 *,
 *::before,
 *::after {
@@ -31,5 +29,3 @@ body {
 	max-width: 1200px;
 	width: 100%;
 }
-
-// @include mixins.large;
