@@ -29,4 +29,4 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 
-// --menu dopracowac zeby znikalo ---
+// finish menu remove
