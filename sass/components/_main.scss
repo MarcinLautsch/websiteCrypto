@@ -1,5 +1,11 @@
 @use '../colors';
 
+body {
+	&.scroll-lock {
+		overflow: hidden;
+	}
+}
+
 .cards {
 	background-color: colors.$darker;
 	overflow: hidden;

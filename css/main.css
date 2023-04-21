@@ -331,6 +331,10 @@
     font-size: 2.2rem;
   }
 }
+body.scroll-lock {
+  overflow: hidden;
+}
+
 .cards {
   background-color: #191919;
   overflow: hidden;
